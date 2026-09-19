@@ -1,0 +1,226 @@
+/* ============================================================
+   HERO SECTION - RESPONSIVE & ESCALABLE
+   ============================================================ */
+
+/* 1. Envoltura de sección completa (Background / Layout general) */
+.hero-section {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente en desktop */
+  background-color: var(--neutral--700);
+  /* Padding vertical y lateral fluido */
+  padding-block: clamp(3rem, 8vh, 6rem);
+  padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+}
+
+/* 2. Contenedor principal centrado con tope máximo */
+.hero-container {
+  width: 100%;
+  max-width: 1200px;        /* Evita que se deforme en pantallas 2K/4K */
+  margin-inline: auto;      /* Centrado horizontal automático */
+  /* Estructura de 2 columnas con CSS Grid */
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna por defecto (mobile-first) */
+  gap: clamp(2rem, 4vw, 4rem); /* Espacio adaptable entre columnas */
+  align-items: center;
+}
+
+/* En Desktop (a partir de 992px) se activa el layout de 2 columnas */
+@media (min-width: 992px) {
+  .hero-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas de igual proporción */
+    /* Si quisieras más espacio para el texto que para la imagen:
+       grid-template-columns: 1.15fr 0.85fr; */
+  }
+}
+
+/* 3. Columna de contenido (Texto y Botones) */
+.hero-col-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 560px; /* Evita líneas de texto demasiado largas */
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+/* Botones de acción */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--blue-primary-800);
+  color: white;
+}
+
+.btn-primary:hover {
+  color: var(--white);
+  background-color: var(--blue-primary-800);
+  box-shadow: 0 14px 30px -5px rgba(109, 40, 217, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* 4. Columna visual / Imagen */
+.hero-col-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-visual-box {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Mantiene proporciones perfectas en cualquier pantalla */
+  background: radial-gradient(circle at top left, #1e2230, #12141a);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================
+   SECCIÓN: OVERVIEW / CORE SKILLS
+   ============================================================ */
+
+.overview-section {
+  width: 100%;
+  background-color: var(--neutral--700); /* Fondo oscuro principal */
+  color: #ffffff;
+  padding-block: clamp(3.5rem, 7vh, 6.5rem);
+  padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+}
+
+/* Contenedor adaptativo con límite en monitores anchos */
+.overview-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center; /* Alineación centrada para equilibrio visual */
+}
+
+/* Distribución en pantallas de escritorio */
+@media (min-width: 992px) {
+  .overview-container {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+/* --- Columna Izquierda --- */
+.overview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/* Badge tipo píldora */
+.badge {
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.overview-title {
+  /* Escala tipográfica fluida entre pantallas móviles y desktop */
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.overview-text {
+  color: #cbd5e1;
+  margin: 0;
+}
+
+/* --- Columna Derecha: Tarjeta Card --- */
+.overview-card {
+  background-color: #141721; /* Tono de tarjeta azulado oscuro */
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+/* Lista de skills */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.skill-icon {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  margin-top: 0.2rem; /* Alinea el icono con la primera línea de texto */
+}
+
+.skill-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.skill-item p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.skill-item strong {
+  color: #ffffff;
+  font-weight: 700;
+}

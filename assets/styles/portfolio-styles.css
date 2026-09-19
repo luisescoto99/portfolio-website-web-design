@@ -1,0 +1,57 @@
+.title-container {
+    color: #0d0e13;
+}
+
+.center-div {
+    /* padding top y bottom */
+    padding: 5rem 0rem 0rem 0rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.custom-padding {
+    padding-top: 3rem !important;
+}
+
+.spacing-block {height: 8rem;}
+
+@media (max-width: 1025px) {
+    .center-div {
+        padding: 3rem 2rem 0rem 2rem;
+    }
+
+    .spacing-block {height: 5rem;}
+}
+
+/* Propiedades para la plantilla del portafolio */
+.case-study-section {
+    width: 100%;
+    color: var(--neutral-100);
+    /* Espaciado fluido vertical y lateral */
+    padding-block: clamp(4rem, 9vh, 7.5rem);
+    padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+    display: flex;
+    justify-content: center;
+}
+
+.case-study-container {
+    width: 100%;
+    max-width: 680px; /* Ancho estándar para evitar fatiga visual en líneas largas */
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    gap: 1.75rem;
+    color: var(--neutral-500);
+}
+
+.heading-margin-top {margin-top: 2rem;}
+.case-study-body {line-height: var(--lh-h4);}
+ul {padding-left: 1.5rem;}
+ul li {margin-bottom: 0.75rem;}
+.heading-h3-small {
+    font-size: var(--font-h4);
+    line-height: var(--lh-h4);
+}

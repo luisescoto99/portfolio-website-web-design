@@ -1,0 +1,50 @@
+/* ============================================================
+   SECCIÓN: ABOUT ME (LAYOUT TIPO BLOG EN 1 COLUMNA)
+   ============================================================ */
+.about-section {
+    width: 100%;
+    color: var(--neutral-100);
+    /* Espaciado fluido vertical y lateral */
+    padding-block: clamp(4rem, 9vh, 7.5rem);
+    padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor central con límite estricto para óptima lectura (editorial) */
+.about-container {
+    width: 100%;
+    max-width: 680px; /* Ancho estándar para evitar fatiga visual en líneas largas */
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    gap: 1.75rem;
+    color: var(--neutral-500);
+}
+
+/* Título */
+.about-title {
+    text-align: left;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--neutral-950);
+}
+
+/* Párrafo / Texto base */
+.about-body {
+    text-align: left;
+    margin: 0;
+    line-height: 2.2rem;
+    font-weight: 500;
+}
+.about-article{line-height: 2.2rem;}
+.article-link {
+    color: var(--neutral-950);
+    text-decoration: underline;
+    font-weight: 700;
+}
+.article-link:hover {
+    color: var(--blue-primary-800);
+}
