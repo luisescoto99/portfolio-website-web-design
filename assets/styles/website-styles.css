@@ -7,8 +7,8 @@
 :root {
   --neutral-950: #0d0e13;
   --neutral-800: #15171e;
-  --neutral-700: #191b24;
-  --neutral-500: #1f222d;
+  --neutral-700: #212430;
+  --neutral-500: #393c44;
   --neutral-400: #acaebb;
   --neutral-300: #cfd2dd;
   --neutral-100: #e2e2e6;
@@ -65,7 +65,7 @@ body {
   font-family: Inter, sans-serif;
   font-size: var(--body-copy);
   line-height: var(--lh-h5);
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-700);
   overflow: auto;
 }
 
@@ -81,12 +81,16 @@ body {
   color: var(--neutral-700);
 }
 
-.color--white {
-  color: var(--white);
+.color--black-500 {
+  color: var(--neutral-500);
 }
 
 .color--neutral-300 {
   color: var(--neutral-300);
+}
+
+.color--white {
+  color: var(--white);
 }
 
 h1,
@@ -348,7 +352,7 @@ NAV MOBILE & TABLET STYLES (< 1024px)
 
 .process-section {
   width: 100%;
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-700);
   color: #ffffff;
   padding-block: clamp(3.5rem, 7vh, 6.5rem);
   padding-inline: clamp(1.25rem, 5vw, 3.5rem);
@@ -452,7 +456,7 @@ NAV MOBILE & TABLET STYLES (< 1024px)
 
 .projects-section {
   width: 100%;
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-700);
   color: #ffffff;
   padding-block: clamp(3.5rem, 7vh, 6.5rem);
   padding-inline: clamp(1.25rem, 5vw, 3.5rem);
@@ -617,7 +621,7 @@ NAV MOBILE & TABLET STYLES (< 1024px)
   position: relative;
   width: 100%;
   /* Fondo oscuro con resplandor sutil morado/azulado al centro */
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-700);
   color: #ffffff;
   padding-block: clamp(4.5rem, 10vh, 8rem);
   padding-inline: clamp(1.25rem, 5vw, 3.5rem);
