@@ -37,7 +37,7 @@
 
 .case-study-container {
     width: 100%;
-    max-width: 680px; /* Ancho estándar para evitar fatiga visual en líneas largas */
+    max-width: 720px; /* Ancho estándar para evitar fatiga visual en líneas largas */
     margin-inline: auto;
     display: flex;
     flex-direction: column;
