@@ -58,3 +58,11 @@ ul li {margin-bottom: 0.75rem;}
     font-size: var(--font-h4);
     line-height: var(--lh-h4);
 }
+
+.block-quote {
+    text-align: left;
+    border-left: 4px solid var(--blue-primary-800);
+    padding-left: 24px;
+    color: var(--neutral-500);
+    line-height: 2rem;
+}
